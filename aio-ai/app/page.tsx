@@ -1,4 +1,14 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Loader2Icon } from "lucide-react";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 export default function Home() {
   return (
@@ -97,6 +107,23 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
+        <Button variant="outline">
+          <Loader2Icon className="animate-spin" />
+          Buttons
+        </Button>
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <NavigationMenuLink>Link</NavigationMenuLink>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+                        <NavigationMenuItem>
+              Item Two
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
       </footer>
     </div>
   );
