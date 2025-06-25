@@ -39,13 +39,13 @@ export default function RegisterPage() {
             password: {
               inputProps: {
                 type: "password",
-                placeholder: "••••••••",
+                placeholder: "",
               },
             },
             confirmPassword: {
               inputProps: {
                 type: "password",
-                placeholder: "••••••••",
+                placeholder: "",
               },
             },
           }}

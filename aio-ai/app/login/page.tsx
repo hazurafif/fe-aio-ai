@@ -2,6 +2,7 @@
 
 import * as z from "zod";
 import AutoForm, { AutoFormSubmit } from "@/components/ui/auto-form";
+import Link from "next/link";
 
 const loginSchema = z.object({
   email: z
@@ -10,7 +11,7 @@ const loginSchema = z.object({
 
   password: z
     .string({ required_error: "Password is required." })
-    .describe("Enter your secure password")
+    .describe("Password")
     .min(8, { message: "Password must be at least 8 characters." }),
 });
 
@@ -37,6 +38,13 @@ export default function LoginPage() {
         >
           <AutoFormSubmit>Login</AutoFormSubmit>
         </AutoForm>
+
+        <p className="mt-4 text-center text-sm text-gray-600 dark:text-gray-400">
+          Don&apos;t have an account?{" "}
+          <Link href="/register" className="text-blue-600 hover:underline dark:text-blue-400">
+            Register
+          </Link>
+        </p>
       </div>
     </div>
   );
